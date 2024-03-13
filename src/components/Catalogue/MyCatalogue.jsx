@@ -2,7 +2,9 @@ import { getRecords } from "../auth/Services/recordService.jsx";
 import "./MyCatalogue.css"
 import { useEffect, useState } from "react";
 import { getGenres } from "../auth/Services/recordService.jsx"
-import { CatalogueOptions } from "./FilterDropdown.jsx";
+import { CatalogueOptions } from "./CatalogueOptions.jsx";
+import { CatalogueTable } from "./CatalogueTable.jsx";
+
 
 export const MyCatalogue = ({currentUser}) => {
     const [userRecords, setUserRecords] = useState([])
@@ -26,13 +28,18 @@ export const MyCatalogue = ({currentUser}) => {
     }, [])
     
     return(
-        <div className="catalogue-header">
-            <div className="catalogue-count">
-                <h1>You have {userRecords.length} records in your catalogue!</h1>
+        <div className="catalogue">
+            <div className="catalogue-header">
+                <div className="catalogue-count">
+                    <h1>You have {userRecords.length} records in your catalogue!</h1>
+                </div>
+                <div className="catalogue-options">
+                    <CatalogueOptions userRecords={userRecords} setUserRecords={setUserRecords}/>
+                    <button>Add a record</button>
+                </div>
             </div>
-            <div className="catalogue-options">
-                <CatalogueOptions userRecords={userRecords} setUserRecords={setUserRecords}/>
-                <button>Add a record</button>
+            <div>
+                <CatalogueTable userRecords={userRecords}/>
             </div>
         </div>
     )
