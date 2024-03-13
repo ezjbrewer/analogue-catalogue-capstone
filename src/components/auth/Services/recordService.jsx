@@ -1,3 +1,3 @@
 export const getRecords = () => {
-    return fetch("http://localhost:8000/records")
+    return fetch("http://localhost:8000/records").then((res) => res.json())
 }
