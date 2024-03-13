@@ -1,0 +1,25 @@
+.navbar {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 10px auto;
+    padding: 3px;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+  }
+
+  .navbar-item {
+    flex-basis: 20%;
+    list-style-type: none;
+    text-align: center;
+    color: var(--offWhite);
+  }
+
+  .navbar-link {
+    text-decoration: none;
+    font-family: "Nanum Gothic";
+    font-weight: bolder;
+  }
+  
+  .navbar-link:hover {
+    color: var(--primary);
+  }

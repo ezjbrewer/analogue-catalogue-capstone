@@ -1,0 +1,48 @@
+1. Gather all data, correctly correlated -> database.json 8000
+    -Connect data to API
+    -Select default account to use during development
+    -Create login page (default value -> chosen account)
+    -Create register page
+
+2. Render Nav Bar
+    -Home
+    -My Catalogue
+    -My Posts
+    -Profile
+    -Log Out
+
+    -Let all Nav Bar appear at the top of all pages EXCEPT Login / Register
+
+3. Render Home Page
+    -Render all posts (For each, title, body, likes, and route to view comments)
+    -Search bar to search for User, Record or Artist name
+
+4. Render My Catalogue
+    -Render total amount of records
+    -Render record library in table
+        -Ensure all information is correctly
+        -Ensure all record titles take the user to the record details view
+        -Ensure Add Record button takes the user to the New Record view
+        -Ensure Edit Record captures targeted record row
+
+    -Render user's selected record detail page
+        -List details and track listing
+        -Button to return the user back to Catalogue
+        -Button to create post based off of selected record
+
+        -Render Create post
+         -Only option for user is what to put in body.
+         -"User is listening to Record by Artist"
+         -Once submitted, takes user to My Posts
+
+5. Render Profile & Edit Profile
+    -Let user be able to edit their name and email
+    -Let user be able to save the changes made
+
+6. My Posts (and Edit Post)
+    -User can either View Comments, Delete Post, or Edit Post
+        -Take user to View Comments view of that post
+        -Let user delete particular post
+        -Let user edit post, take user to Edit Post
+
+    -Edit post is same as New Post, except text input field has default value of whatever the text in the post was

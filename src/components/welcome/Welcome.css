@@ -1,0 +1,10 @@
+body {
+    font-family: "Nanum Gothic";
+}
+
+.welcome-card {
+    border: 2px solid black;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
