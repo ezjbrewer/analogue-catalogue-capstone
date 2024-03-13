@@ -32,6 +32,7 @@ export const MyCatalogue = ({currentUser}) => {
             </div>
             <div className="catalogue-options">
                 <CatalogueOptions userRecords={userRecords} setUserRecords={setUserRecords}/>
+                <button>Add a record</button>
             </div>
         </div>
     )

@@ -1,5 +1,5 @@
 export const getRecords = () => {
-    return fetch("http://localhost:8000/records").then((res) => res.json())
+    return fetch("http://localhost:8000/records?_expand=genre").then((res) => res.json())
 }
 
 export const getGenres = () => {

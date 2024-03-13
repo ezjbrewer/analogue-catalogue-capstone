@@ -1,13 +1,29 @@
-
-
 export const CatalogueOptions = ({userRecords, setUserRecords}) => {
     
     const sortByGenre = () => {
-        console.log("Genre!")
+        userRecords.sort(function (a, b) {
+            if (a.genre.genreName < b.genre.genreName) {
+              return -1
+            }
+            if (a.genre.genreName > b.genre.genreName) {
+              return 1
+            }
+            return 0
+          })
+        setUserRecords(userRecords)
     }
     
     const sortByArtist = () => {
-        console.log("Artist!")
+        userRecords.sort(function (a, b) {
+            if (a.artist < b.artist) {
+              return -1
+            }
+            if (a.artist > b.artist) {
+              return 1
+            }
+            return 0
+          })
+        setUserRecords(userRecords)
     }
 
     const handleSorting = (e) => {
@@ -32,5 +48,3 @@ export const CatalogueOptions = ({userRecords, setUserRecords}) => {
         </div>
     )
 }
-
-// Bunnies
