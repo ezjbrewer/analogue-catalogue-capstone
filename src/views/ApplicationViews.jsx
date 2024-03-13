@@ -1,5 +1,6 @@
 import { Routes, Route, Outlet } from "react-router-dom";
 import { NavBar } from "../components/NavBar/NavBar.jsx";
+import { MyCatalogue } from "../components/Catalogue/MyCatalogue.jsx";
 import { Welcome } from "../components/welcome/Welcome.jsx";
 import { useState, useEffect } from "react";
 
@@ -22,6 +23,7 @@ export const ApplicationViews = () => {
         }
         >
             <Route index element={<Welcome/>} />
+            <Route index element={<MyCatalogue currentUser={currentUser}/>}/>
 
         </Route>
     </Routes>
