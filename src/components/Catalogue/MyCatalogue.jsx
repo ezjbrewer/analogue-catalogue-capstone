@@ -1,7 +1,6 @@
 import { getRecords } from "../auth/Services/recordService.jsx";
 import "./MyCatalogue.css"
 import { useEffect, useState } from "react";
-import { getGenres } from "../auth/Services/recordService.jsx"
 import { CatalogueOptions } from "./CatalogueOptions.jsx";
 import { CatalogueTable } from "./CatalogueTable.jsx";
 import { useNavigate } from "react-router-dom";
@@ -9,7 +8,6 @@ import { useNavigate } from "react-router-dom";
 
 export const MyCatalogue = ({currentUser}) => {
     const [userRecords, setUserRecords] = useState([])
-    const [allGenres, setAllGenres] = useState([])
     const [sortedArtists, setSortedArtists] = useState([])
     const [sortDropdownId, setSortDropdownId] = useState(0)
 
@@ -23,12 +21,6 @@ export const MyCatalogue = ({currentUser}) => {
             setUserRecords(filteredRecords)
         })
     }, [currentUser])
-
-    useEffect(() => {
-        getGenres().then((genres) => {
-            setAllGenres(allGenres)
-        })
-    }, [])
 
     return(
         <div className="catalogue">
