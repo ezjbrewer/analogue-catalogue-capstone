@@ -12,7 +12,7 @@ export const Welcome = () => {
            <div className="welcome-msg">
                 <button className="welcome-btn"
                 onClick={() => {
-                    console.log("My Catalogue!")
+                    navigate("/myCatalogue")
                 }}>
                     See your catalogue!
                 </button>

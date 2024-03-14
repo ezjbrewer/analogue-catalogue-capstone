@@ -1,10 +1,11 @@
 import { useState } from "react"
+import { GenreOptions, TypeOptions, SpeedOptions, SizeOptions, ConditionOptions } from "./DropdownOptions.jsx"
 
 export const NewRecord = ({currentUser}) => {
     const [record, setRecord] = useState({
         userId: currentUser.id
     })
-    
+
     return(
         <div className="new-record-card">
             <div className="new-record-heading">
@@ -41,50 +42,46 @@ export const NewRecord = ({currentUser}) => {
                     </fieldset>
                     <fieldset>
                     <label>Genre</label>
-                        <select
-                            defaultValue="0"
-                            className="dropdown-select"
-                        >
-                            <option value="0">Genre...</option>
-                        </select>
+                        <GenreOptions/>
                     </fieldset>
                     <fieldset>
                     <label>Type</label>
-                        <select
-                            defaultValue="0"
-                            className="dropdown-select"
-                        >
-                            <option value="0">Type...</option>
-                        </select>
+                        <TypeOptions/>
                     </fieldset>
                     <fieldset>
                     <label>Speed</label>
-                        <select
-                            defaultValue="0"
-                            className="dropdown-select"
-                        >
-                            <option value="0">Speed...</option>
-                        </select>
+                        <SpeedOptions/>
                     </fieldset>
                     <fieldset>
                     <label>Size</label>
-                        <select
-                            defaultValue="0"
-                            className="dropdown-select"
-                        >
-                            <option value="0">Size...</option>
-                        </select>
+                        <SizeOptions/>
                     </fieldset>
                     <fieldset>
                     <label>Condition</label>
-                        <select
-                            defaultValue="0"
-                            className="dropdown-select"
-                        >
-                            <option value="0">Condition...</option>
-                        </select>
+                       <ConditionOptions/>
                     </fieldset>
                 </div>
+                <div className="pressing-input">
+                <fieldset>
+                        <div>
+                            <label>Pressing Location</label>
+                            <input
+                                className="text-input"
+                                placeholder="Pressing Location..."
+                            />
+                        </div>
+                </fieldset>
+                <fieldset>
+                        <div >
+                            <label>Pressing Year</label>
+                            <input
+                                className="text-input"
+                                placeholder="Pressing Year..."
+                            />
+                        </div>
+                </fieldset>
+                </div>
+                <button>Add Record</button>
             </div>
         </div>
     )
