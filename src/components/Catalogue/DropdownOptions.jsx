@@ -13,14 +13,20 @@ export const GenreOptions = () => {
         })
     }, [])
 
+    const handleGenreChange = (event) => {
+        console.log(event.target.value)
+    }
+
+
     return (
         <select
             defaultValue="0"
             className="dropdown-select"
+            onChange={handleGenreChange}
         >
         <option value="0">None selected</option>
             {genres.map((genre) => {
-                return <option key={genre.id}>{genre.genreName}</option>
+                return <option key={genre.id} value={genre.id}>{genre.genreName}</option>
             })}
         </select>
     )
@@ -33,15 +39,20 @@ export const TypeOptions = () => {
                 setTypes(types)
         })
     }, [])
+
+    const handleTypeChange = (event) => {
+        console.log(event.target.value)
+    }
     
     return(
         <select
             defaultValue="0"
             className="dropdown-select"
+            onChange={handleTypeChange}
         >
             <option value="0">None selected</option>
             {types.map((type) => {
-                return <option key={type.id}>{type.typeName}</option>
+                return <option key={type.id} value={type.id}>{type.typeName}</option>
             })}
         </select>
 )}
@@ -52,16 +63,21 @@ export const TypeOptions = () => {
             getSpeeds().then((speeds) => {
                 setSpeeds(speeds)
             })
-        })
+        }, [])
+
+        const handleSpeedChange = (event) => {
+            console.log(event.target.value)
+        }
 
         return(
             <select
                 defaultValue="0"
                 className="dropdown-select"
+                onChange={handleSpeedChange}
             >
                 <option value="0">None selected</option>
                 {speeds.map((speed) => {
-                    return <option key={speed.id}>{speed.speedName}</option>
+                    return <option key={speed.id} value={speed.id}>{speed.speedName}</option>
                 })}
             </select>
         )
@@ -73,16 +89,21 @@ export const TypeOptions = () => {
             getSizes().then((sizes) => {
                 setSizes(sizes)
             })
-        })
+        }, [])
+
+        const handleSizeChange = (event) => {
+            console.log(event.target.value)
+        }
 
         return(
             <select
                 defaultValue="0"
                 className="dropdown-select"
+                onChange={handleSizeChange}
             >
                 <option key="0">None selected</option>
                 {sizes.map((size) => {
-                    return <option key={size.id}>{size.sizeName}</option>
+                    return <option key={size.id} value={size.id}>{size.sizeName}</option>
                 })}
             </select>
         )
@@ -95,16 +116,21 @@ export const TypeOptions = () => {
             getConditions().then((conditions) => {
                 setConditions(conditions)
             })
-        })
+        }, [])
+
+        const handleConditionChange = (event) => {
+            console.log(event.target.value)
+        }
 
         return(
             <select
             defaultValue="0"
             className="dropdown-select"
+            onChange={handleConditionChange}
             >
                 <option key="0">None selected</option>
                 {conditions.map((condition) => {
-                    return <option key={condition.id}>{condition.conditionName}</option>
+                    return <option key={condition.id} value={condition.id}>{condition.conditionName}</option>
                 })}
             </select>
         )
