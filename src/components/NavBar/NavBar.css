@@ -5,6 +5,7 @@
     padding: 3px;
     justify-content: space-between;
     border-bottom: 2px solid black;
+    text-decoration: none;
   }
 
   .navbar-item {
@@ -12,12 +13,14 @@
     list-style-type: none;
     text-align: center;
     color: var(--offWhite);
+    text-decoration: none;
   }
 
   .navbar-link {
     text-decoration: none;
     font-family: "Nanum Gothic";
     font-weight: bolder;
+    color: black;
   }
   
   .navbar-link:hover {

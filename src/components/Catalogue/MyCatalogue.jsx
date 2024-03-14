@@ -10,7 +10,6 @@ export const MyCatalogue = ({currentUser}) => {
     const [userRecords, setUserRecords] = useState([])
     const [allGenres, setAllGenres] = useState([])
     const [sortedArtists, setSortedArtists] = useState([])
-    const [sortDropdownId, setSortDropdownId] = useState(0)
 
     useEffect(() => {
         getRecords().then((allRecords) => {
@@ -26,7 +25,7 @@ export const MyCatalogue = ({currentUser}) => {
             setAllGenres(allGenres)
         })
     }, [])
-    
+
     return(
         <div className="catalogue">
             <div className="catalogue-header">
@@ -34,12 +33,12 @@ export const MyCatalogue = ({currentUser}) => {
                     <h1>You have {userRecords.length} records in your catalogue!</h1>
                 </div>
                 <div className="catalogue-options">
-                    <CatalogueOptions userRecords={userRecords} setUserRecords={setUserRecords}/>
+                    <CatalogueOptions key={userRecords.id} userRecords={userRecords} setUserRecords={setUserRecords}/>
                     <button>Add a record</button>
                 </div>
             </div>
             <div>
-                <CatalogueTable userRecords={userRecords}/>
+                <CatalogueTable key={userRecords.id} userRecords={userRecords}/>
             </div>
         </div>
     )
