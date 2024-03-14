@@ -4,12 +4,16 @@ import { useEffect, useState } from "react";
 import { getGenres } from "../auth/Services/recordService.jsx"
 import { CatalogueOptions } from "./CatalogueOptions.jsx";
 import { CatalogueTable } from "./CatalogueTable.jsx";
+import { useNavigate } from "react-router-dom";
 
 
 export const MyCatalogue = ({currentUser}) => {
     const [userRecords, setUserRecords] = useState([])
     const [allGenres, setAllGenres] = useState([])
     const [sortedArtists, setSortedArtists] = useState([])
+    const [sortDropdownId, setSortDropdownId] = useState(0)
+
+    const navigate = useNavigate()
 
     useEffect(() => {
         getRecords().then((allRecords) => {
@@ -33,8 +37,8 @@ export const MyCatalogue = ({currentUser}) => {
                     <h1>You have {userRecords.length} records in your catalogue!</h1>
                 </div>
                 <div className="catalogue-options">
-                    <CatalogueOptions key={userRecords.id} userRecords={userRecords} setUserRecords={setUserRecords}/>
-                    <button>Add a record</button>
+                    <CatalogueOptions key={userRecords.id} userRecords={userRecords} setUserRecords={setUserRecords} currentUser={currentUser}/>
+                    <button onClick={() => navigate("/newRecord")}>Add a record</button>
                 </div>
             </div>
             <div>

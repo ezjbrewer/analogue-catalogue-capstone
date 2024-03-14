@@ -3,6 +3,7 @@ import { NavBar } from "../components/NavBar/NavBar.jsx";
 import { MyCatalogue } from "../components/Catalogue/MyCatalogue.jsx";
 import { Welcome } from "../components/welcome/Welcome.jsx";
 import { useState, useEffect } from "react";
+import { NewRecord } from "../components/Catalogue/NewRecords.jsx";
 
 export const ApplicationViews = () => {
     const [currentUser, setCurrentUser] = useState({})
@@ -23,9 +24,12 @@ export const ApplicationViews = () => {
         }
         >
             <Route index element={<Welcome/>} />
-            <Route path="/myCatalogue" element={<MyCatalogue currentUser={currentUser}/>}/>
-
+            <Route path="/myCatalogue">
+              <Route index element={<MyCatalogue currentUser={currentUser}/>} />
+            </Route>
+            <Route path="/newRecord" element={<NewRecord />} />
         </Route>
     </Routes>
   )
 }
+//<Route path="/myCatalogue" element={<MyCatalogue currentUser={currentUser}/>}/> newRecord

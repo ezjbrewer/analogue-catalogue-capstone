@@ -28,7 +28,8 @@ export const CatalogueTable = ({userRecords}) => {
                     <td>{record.condition.condition}</td>
                     <td>{record.pressLocation}</td>
                     <td>{record.pressYear}</td>
-                </tr>)
+                </tr>
+                )
             })}
             </tbody>
         </table>
