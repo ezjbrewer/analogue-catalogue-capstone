@@ -1,7 +1,21 @@
-export const CatalogueOptions = ({userRecords, setUserRecords}) => {
+import { useEffect, useState } from "react"
+import { getRecords } from "../auth/Services/recordService.jsx"
+
+export const CatalogueOptions = ({userRecords, setUserRecords, currentUser}) => {
     
+    const [unsortedRecords, setUnsortedRecords] = useState([])
+
+    useEffect(() => {
+      getRecords().then((allRecords) => {
+          const filteredRecords = allRecords.filter(record => {
+              return record.userId === currentUser.id
+          })
+          setUnsortedRecords(filteredRecords)
+      })
+  }, [currentUser])
+
     const sortByGenre = () => {
-        userRecords.sort(function (a, b) {
+        const sortedRecords = [...userRecords].sort(function (a, b) {
             if (a.genre.genreName < b.genre.genreName) {
               return -1
             }
@@ -10,11 +24,11 @@ export const CatalogueOptions = ({userRecords, setUserRecords}) => {
             }
             return 0
           })
-        setUserRecords(userRecords)
-    }
+        setUserRecords(sortedRecords)
+      }
     
     const sortByArtist = () => {
-        userRecords.sort(function (a, b) {
+      const sortedRecords = [...userRecords].sort(function (a, b) {
             if (a.artist < b.artist) {
               return -1
             }
@@ -23,7 +37,7 @@ export const CatalogueOptions = ({userRecords, setUserRecords}) => {
             }
             return 0
           })
-        setUserRecords(userRecords)
+        setUserRecords(sortedRecords)
     }
 
     const handleSorting = (e) => {
@@ -32,6 +46,8 @@ export const CatalogueOptions = ({userRecords, setUserRecords}) => {
             sortByArtist()
         } else if (value === 2) {
             sortByGenre()
+        } else if (value === 0) {
+          setUserRecords(unsortedRecords)
         }
     }
     
