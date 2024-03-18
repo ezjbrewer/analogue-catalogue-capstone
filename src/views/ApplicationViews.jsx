@@ -4,6 +4,7 @@ import { MyCatalogue } from "../components/Catalogue/MyCatalogue.jsx";
 import { Welcome } from "../components/welcome/Welcome.jsx";
 import { useState, useEffect } from "react";
 import { NewRecord } from "../components/Catalogue/NewRecords.jsx";
+import { EditRecord } from "../components/Catalogue/EditRecord.jsx";
 
 export const ApplicationViews = () => {
     const [currentUser, setCurrentUser] = useState({})
@@ -28,6 +29,7 @@ export const ApplicationViews = () => {
               <Route index element={<MyCatalogue currentUser={currentUser}/>} />
             </Route>
             <Route path="/newRecord" element={<NewRecord currentUser={currentUser} />} />
+            <Route path="/myCatalogue/:recordId" element={<EditRecord/>} />
         </Route>
     </Routes>
   )
