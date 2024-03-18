@@ -29,7 +29,9 @@ export const ApplicationViews = () => {
               <Route index element={<MyCatalogue currentUser={currentUser}/>} />
             </Route>
             <Route path="/newRecord" element={<NewRecord currentUser={currentUser} />} />
-            <Route path="/myCatalogue/:recordId" element={<EditRecord/>} />
+            <Route path="/editRecord">
+            <Route path=":recordId" element={<EditRecord currentUser={currentUser} />} />
+            </Route>
         </Route>
     </Routes>
   )

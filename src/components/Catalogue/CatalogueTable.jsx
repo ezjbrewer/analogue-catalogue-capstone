@@ -32,7 +32,7 @@ export const CatalogueTable = ({userRecords}) => {
                     <td>{record.pressYear}</td>
                     <td>
                         <button>
-                            <Link key={record.id} to={`/myCatalogue/${record.id}`}>
+                            <Link key={record.id} to={`/editRecord/${record.id}`}>
                                 Edit
                             </Link>
                         </button>
