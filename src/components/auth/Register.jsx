@@ -7,14 +7,12 @@ export const Register = (props) => {
   const [user, setUser] = useState({
     email: "",
     fullName: "",
-    cohort: 0,
   })
   let navigate = useNavigate()
 
   const registerNewUser = () => {
     const newUser = {
       ...user,
-      cohort: parseInt(user.cohort),
     }
 
     createUser(newUser).then((createdUser) => {
@@ -22,8 +20,7 @@ export const Register = (props) => {
         localStorage.setItem(
           "analogue_user",
           JSON.stringify({
-            id: createdUser.id,
-            staff: createdUser.isStaff,
+            id: createdUser.id
           })
         )
 
@@ -36,10 +33,8 @@ export const Register = (props) => {
     e.preventDefault()
     getUserByEmail(user.email).then((response) => {
       if (response.length > 0) {
-        // Duplicate email. No good.
         window.alert("Account with that email address already exists")
       } else {
-        // Good email, create user.
         registerNewUser()
       }
     })

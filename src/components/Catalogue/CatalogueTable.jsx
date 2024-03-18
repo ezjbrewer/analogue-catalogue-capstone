@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom"
+
 export const CatalogueTable = ({userRecords}) => {
     
     return(
-        <table className="catalouge-table">
+        <table className="catalogue-table">
             <thead>
                 <tr id="0">
                     <td>Artist</td>
@@ -23,11 +25,18 @@ export const CatalogueTable = ({userRecords}) => {
                     <td>{record.recordName}</td>
                     <td>{record.releaseYear}</td>
                     <td>{record.genre.genreName}</td>
-                    <td>{record.type.type}</td>
-                    <td>{record.speed.speed} RPM</td>
-                    <td>{record.condition.condition}</td>
+                    <td>{record.type.typeName}</td>
+                    <td>{record.speed.speedName} RPM</td>
+                    <td>{record.condition.conditionName}</td>
                     <td>{record.pressLocation}</td>
                     <td>{record.pressYear}</td>
+                    <td>
+                        <button>
+                            <Link key={record.id} to={`/myCatalogue/${record.id}`}>
+                                Edit
+                            </Link>
+                        </button>
+                    </td>
                 </tr>
                 )
             })}

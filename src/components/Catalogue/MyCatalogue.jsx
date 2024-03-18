@@ -8,8 +8,6 @@ import { useNavigate } from "react-router-dom";
 
 export const MyCatalogue = ({currentUser}) => {
     const [userRecords, setUserRecords] = useState([])
-    const [sortedArtists, setSortedArtists] = useState([])
-    const [sortDropdownId, setSortDropdownId] = useState(0)
 
     const navigate = useNavigate()
 

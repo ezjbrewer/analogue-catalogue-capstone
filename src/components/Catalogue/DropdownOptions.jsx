@@ -5,7 +5,7 @@ import { getSizes } from "../auth/Services/sizeService.jsx"
 import { getConditions } from "../auth/Services/conditionService.jsx"
 import { useEffect, useState } from "react"
 
-export const GenreOptions = () => {
+export const GenreOptions = ({handleInputChange}) => {
     const [genres, setGenres] = useState([]);
     useEffect(() => {
         getGenres().then((genres) => {
@@ -14,9 +14,14 @@ export const GenreOptions = () => {
     }, [])
 
     const handleGenreChange = (event) => {
-        console.log(event.target.value)
+        const selectedGenreId = parseInt(event.target.value);
+        handleInputChange({
+            target: {
+            name: "genreId",
+            value: selectedGenreId
+            }
+        })
     }
-
 
     return (
         <select
@@ -24,25 +29,30 @@ export const GenreOptions = () => {
             className="dropdown-select"
             onChange={handleGenreChange}
         >
-        <option value="0">None selected</option>
             {genres.map((genre) => {
-                return <option key={genre.id} value={genre.id}>{genre.genreName}</option>
+                return <option key={genre.id} value={genre.id} name="genreId">{genre.genreName}</option>
             })}
         </select>
     )
 }
 
-export const TypeOptions = () => {
-    const [types, setTypes] = useState([])
-    useEffect(() => {
-        getTypes().then((types) => {
-                setTypes(types)
-        })
-    }, [])
+    export const TypeOptions = ({handleInputChange}) => {
+        const [types, setTypes] = useState([])
+        useEffect(() => {
+            getTypes().then((types) => {
+                    setTypes(types)
+            })
+        }, [])
 
-    const handleTypeChange = (event) => {
-        console.log(event.target.value)
-    }
+        const handleTypeChange = (event) => {
+            const selectedTypeId = parseInt(event.target.value);
+            handleInputChange({
+                target: {
+                name: "typeId",
+                value: selectedTypeId
+                }
+            })
+        }
     
     return(
         <select
@@ -50,14 +60,13 @@ export const TypeOptions = () => {
             className="dropdown-select"
             onChange={handleTypeChange}
         >
-            <option value="0">None selected</option>
             {types.map((type) => {
-                return <option key={type.id} value={type.id}>{type.typeName}</option>
+                return <option key={type.id} value={type.id} name="typeId">{type.typeName}</option>
             })}
         </select>
 )}
 
-    export const SpeedOptions = () => {
+    export const SpeedOptions = ({handleInputChange}) => {
     const [speeds, setSpeeds] = useState([])
         useEffect(() => {
             getSpeeds().then((speeds) => {
@@ -66,7 +75,13 @@ export const TypeOptions = () => {
         }, [])
 
         const handleSpeedChange = (event) => {
-            console.log(event.target.value)
+            const selectedSpeedId = parseInt(event.target.value);
+            handleInputChange({
+                target: {
+                name: "speedId",
+                value: selectedSpeedId
+                }
+            })
         }
 
         return(
@@ -75,15 +90,14 @@ export const TypeOptions = () => {
                 className="dropdown-select"
                 onChange={handleSpeedChange}
             >
-                <option value="0">None selected</option>
                 {speeds.map((speed) => {
-                    return <option key={speed.id} value={speed.id}>{speed.speedName}</option>
+                    return <option key={speed.id} value={speed.id} name="speedId">{speed.speedName} RPM</option>
                 })}
             </select>
         )
     }
 
-    export const SizeOptions = () => {
+    export const SizeOptions = ({handleInputChange}) => {
     const [sizes, setSizes] = useState([])
         useEffect(() => {
             getSizes().then((sizes) => {
@@ -92,7 +106,13 @@ export const TypeOptions = () => {
         }, [])
 
         const handleSizeChange = (event) => {
-            console.log(event.target.value)
+            const selectedSizeId = parseInt(event.target.value);
+            handleInputChange({
+                target: {
+                name: "sizeId",
+                value: selectedSizeId
+                }
+            })
         }
 
         return(
@@ -101,16 +121,15 @@ export const TypeOptions = () => {
                 className="dropdown-select"
                 onChange={handleSizeChange}
             >
-                <option key="0">None selected</option>
                 {sizes.map((size) => {
-                    return <option key={size.id} value={size.id}>{size.sizeName}</option>
+                    return <option key={size.id} value={size.id} name="">{size.sizeName}</option>
                 })}
             </select>
         )
         
     }
 
-    export const ConditionOptions = () => {
+    export const ConditionOptions = ({handleInputChange}) => {
     const [conditions, setConditions] = useState([])
         useEffect(() => {
             getConditions().then((conditions) => {
@@ -119,7 +138,13 @@ export const TypeOptions = () => {
         }, [])
 
         const handleConditionChange = (event) => {
-            console.log(event.target.value)
+            const selectedConditionId = parseInt(event.target.value);
+            handleInputChange({
+                target: {
+                name: "conditionId",
+                value: selectedConditionId
+                }
+            })
         }
 
         return(
@@ -128,7 +153,6 @@ export const TypeOptions = () => {
             className="dropdown-select"
             onChange={handleConditionChange}
             >
-                <option key="0">None selected</option>
                 {conditions.map((condition) => {
                     return <option key={condition.id} value={condition.id}>{condition.conditionName}</option>
                 })}
