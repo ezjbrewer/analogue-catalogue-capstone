@@ -28,7 +28,7 @@ export const MyCatalogue = ({currentUser}) => {
                 </div>
                 <div className="catalogue-options">
                     <CatalogueOptions key={userRecords.id} userRecords={userRecords} setUserRecords={setUserRecords} currentUser={currentUser}/>
-                    <button onClick={() => navigate("/newRecord")}>Add a record</button>
+                    <button className="add-record-btn" onClick={() => navigate("/newRecord")}>Add a record</button>
                 </div>
             </div>
             <div>

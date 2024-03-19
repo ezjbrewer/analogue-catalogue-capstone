@@ -1,0 +1,85 @@
+button {
+    border: none;
+    text-decoration: none;
+}
+
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 2px;
+  }
+
+.catalogue-options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.add-record-btn {
+    margin-right: 500px;
+    color: black;
+}
+
+.add-record-btn:hover {
+    background-color: greenyellow;
+}
+
+.edit-record-btn {
+    background-color: lightblue;
+}
+
+.edit-record-btn:hover {
+    background-color: greenyellow;
+}
+
+.edit-btn-link {
+    text-decoration: none;
+    color: black;
+}
+
+.form-field {
+    border: none;
+}
+
+.text-input {
+    margin-left: 5px;
+}
+
+.dropdown-select {
+    margin-left: 5px;
+}
+
+.submit-record-btn {
+    display: flex;
+    justify-content: right;
+}
+
+.submit-btn {
+    font-size: 20px;
+    padding: 5px;
+}
+
+.submit-btn:hover {
+    background-color: greenyellow;
+}
+
+.delete-btn {
+    font-size: 20px;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.delete-btn:hover {
+    background-color: red;
+}
+
+.btn-bar {
+    display: flex;
+    justify-content: right;
+}
+
+.new-record-card {
+    width: 50%;
+    border: 2px solid black;
+    padding: 5px;
+}

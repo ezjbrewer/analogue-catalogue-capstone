@@ -54,7 +54,7 @@ export const EditRecord = ({currentUser}) => {
                 </div>
                 <form className="new-record-form">
                     <div>
-                        <fieldset>
+                        <fieldset className="form-field">
                             <div >
                                 <label>Artist</label>
                                 <input
@@ -66,7 +66,7 @@ export const EditRecord = ({currentUser}) => {
                                 />
                             </div>
                         </fieldset>
-                        <fieldset>
+                        <fieldset className="form-field">
                             <div>
                                 <label>Record Name</label>
                                 <input
@@ -78,7 +78,7 @@ export const EditRecord = ({currentUser}) => {
                                 />
                             </div>
                         </fieldset>
-                        <fieldset>
+                        <fieldset className="form-field">
                             <div>
                                 <label>Year</label>
                                 <input
@@ -90,29 +90,29 @@ export const EditRecord = ({currentUser}) => {
                                 />
                             </div>
                         </fieldset>
-                        <fieldset>
+                        <fieldset className="form-field">
                         <label>Genre</label>
                             <GenreOptionsEdit handleInputChange={handleInputChange} record={record}/>
                         </fieldset>
-                        <fieldset>
+                        <fieldset className="form-field">
                         <label>Type</label>
                             <TypeOptionsEdit handleInputChange={handleInputChange} record={record}/>
                         </fieldset>
-                        <fieldset>
+                        <fieldset className="form-field">
                         <label>Speed</label>
                             <SpeedOptionsEdit handleInputChange={handleInputChange} record={record}/>
                         </fieldset>
-                        <fieldset>
+                        <fieldset className="form-field">
                         <label>Size</label>
                             <SizeOptionsEdit handleInputChange={handleInputChange} record={record}/>
                         </fieldset>
-                        <fieldset>
+                        <fieldset className="form-field">
                         <label>Condition</label>
                            <ConditionOptionsEdit handleInputChange={handleInputChange} record={record}/>
                         </fieldset>
                     </div>
                     <div className="pressing-input">
-                    <fieldset>
+                    <fieldset className="form-field">
                             <div>
                                 <label>Pressing Location</label>
                                 <input
@@ -124,7 +124,7 @@ export const EditRecord = ({currentUser}) => {
                                 />
                             </div>
                     </fieldset>
-                    <fieldset>
+                    <fieldset className="form-field">
                             <div >
                                 <label>Pressing Year</label>
                                 <input
@@ -137,9 +137,9 @@ export const EditRecord = ({currentUser}) => {
                             </div>
                     </fieldset>
                     </div>
-                    <div>
-                        <button type="button" onClick={handleRecordDelete}>Delete record</button>
-                        <button type="button" onClick={handleRecordUpdate}>Save Changes</button>
+                    <div className="btn-bar">
+                        <button type="button" className="delete-btn" onClick={handleRecordDelete}>Delete record</button>
+                        <button type="button" className="submit-btn" onClick={handleRecordUpdate}>Save Changes</button>
                     </div>
                 </form>
             </div>
