@@ -33,7 +33,7 @@ export const Login = () => {
       <section>
         <form className="auth-form" onSubmit={handleLogin}>
           <h1 className="header">Analogue Catalogue</h1>
-          <h2>Please sign in</h2>
+          <h2>Enter email</h2>
           <fieldset className="auth-fieldset">
             <div>
               <input
@@ -49,13 +49,13 @@ export const Login = () => {
           </fieldset>
           <fieldset className="auth-fieldset">
             <div>
-              <button type="submit">Sign in</button>
+              <button className="submit" type="submit">Sign in</button>
             </div>
           </fieldset>
         </form>
       </section>
       <section className="register-link">
-        <Link to="/register">Not a member yet?</Link>
+        <Link className="register" to="/register">Not a cataloguer yet? Click here!</Link>
       </section>
     </main>
   )
