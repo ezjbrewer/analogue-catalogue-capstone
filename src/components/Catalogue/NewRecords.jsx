@@ -45,7 +45,7 @@ export const NewRecord = ({currentUser}) => {
             </div>
             <form className="new-record-form">
                 <div>
-                    <fieldset>
+                    <fieldset className="form-field">
                         <div >
                             <label>Artist</label>
                             <input
@@ -58,7 +58,7 @@ export const NewRecord = ({currentUser}) => {
                             />
                         </div>
                     </fieldset>
-                    <fieldset>
+                    <fieldset className="form-field">
                         <div>
                             <label>Record Name</label>
                             <input
@@ -71,7 +71,7 @@ export const NewRecord = ({currentUser}) => {
                             />
                         </div>
                     </fieldset>
-                    <fieldset>
+                    <fieldset className="form-field">
                         <div>
                             <label>Year</label>
                             <input
@@ -84,29 +84,29 @@ export const NewRecord = ({currentUser}) => {
                             />
                         </div>
                     </fieldset>
-                    <fieldset>
+                    <fieldset className="form-field">
                     <label>Genre</label>
                         <GenreOptions handleInputChange={handleInputChange} record={record}/>
                     </fieldset>
-                    <fieldset>
+                    <fieldset className="form-field">
                     <label>Type</label>
                         <TypeOptions handleInputChange={handleInputChange} record={record}/>
                     </fieldset>
-                    <fieldset>
+                    <fieldset className="form-field">
                     <label>Speed</label>
                         <SpeedOptions handleInputChange={handleInputChange} record={record}/>
                     </fieldset>
-                    <fieldset>
+                    <fieldset className="form-field">
                     <label>Size</label>
                         <SizeOptions handleInputChange={handleInputChange} record={record}/>
                     </fieldset>
-                    <fieldset>
+                    <fieldset className="form-field">
                     <label>Condition</label>
                        <ConditionOptions handleInputChange={handleInputChange} record={record}/>
                     </fieldset>
                 </div>
                 <div className="pressing-input">
-                <fieldset>
+                <fieldset className="form-field">
                         <div>
                             <label>Pressing Location</label>
                             <input
@@ -118,7 +118,7 @@ export const NewRecord = ({currentUser}) => {
                             />
                         </div>
                 </fieldset>
-                <fieldset>
+                <fieldset className="form-field">
                         <div >
                             <label>Pressing Year</label>
                             <input
@@ -131,7 +131,9 @@ export const NewRecord = ({currentUser}) => {
                         </div>
                 </fieldset>
                 </div>
-                <button type="button" onClick={handleRecordSave}>Add Record</button>
+                <div className="submit-record-btn">
+                    <button type="button" className="submit-btn" onClick={handleRecordSave}>Add Record</button>
+                </div>
             </form>
         </div>
     )

@@ -5,6 +5,8 @@ import { Welcome } from "../components/welcome/Welcome.jsx";
 import { useState, useEffect } from "react";
 import { NewRecord } from "../components/Catalogue/NewRecords.jsx";
 import { EditRecord } from "../components/Catalogue/EditRecord.jsx";
+import { Profile } from "../components/profile/profile.jsx";
+import { Home } from "../components/Home/Home.jsx";
 
 export const ApplicationViews = () => {
     const [currentUser, setCurrentUser] = useState({})
@@ -25,11 +27,20 @@ export const ApplicationViews = () => {
         }
         >
             <Route index element={<Welcome/>} />
+            <Route path="/home">
+              <Route index element={<Home currentUser={currentUser}/>} />
+            </Route>
             <Route path="/myCatalogue">
               <Route index element={<MyCatalogue currentUser={currentUser}/>} />
             </Route>
             <Route path="/newRecord" element={<NewRecord currentUser={currentUser} />} />
-            <Route path="/myCatalogue/:recordId" element={<EditRecord/>} />
+            <Route path="/editRecord">
+              <Route path=":recordId" element={<EditRecord currentUser={currentUser} />} />
+            </Route>
+
+            <Route path="/profile">
+              <Route index element={<Profile currentUser={currentUser}/>} />
+            </Route>
         </Route>
     </Routes>
   )

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import "./MyCatalogue.css"
 
 export const CatalogueTable = ({userRecords}) => {
     
@@ -17,7 +18,7 @@ export const CatalogueTable = ({userRecords}) => {
                     <td>Press Year</td>
                 </tr>
             </thead>
-            <tbody key="body">
+            <tbody key="body" className="catalogue-table-body">
             {userRecords.map((record) => {
                 return (
                 <tr key={record.id}>
@@ -31,8 +32,8 @@ export const CatalogueTable = ({userRecords}) => {
                     <td>{record.pressLocation}</td>
                     <td>{record.pressYear}</td>
                     <td>
-                        <button>
-                            <Link key={record.id} to={`/myCatalogue/${record.id}`}>
+                        <button className="edit-record-btn">
+                            <Link className="edit-btn-link" key={record.id} to={`/editRecord/${record.id}`}>
                                 Edit
                             </Link>
                         </button>
