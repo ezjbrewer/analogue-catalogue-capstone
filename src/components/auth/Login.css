@@ -1,8 +1,7 @@
 .auth-container {
-  border: 1px solid gray;
+  border: 2px solid black;
   margin: 3rem 15rem;
   padding: 2rem;
-  border-radius: 1rem;
 }
 
 .header {
@@ -17,6 +16,7 @@
 
 .auth-form-input {
   padding: 0.25rem;
+  border: 2px solid black;
 }
 
 .register-link {
@@ -25,4 +25,18 @@
 
 .auth-fieldset {
   margin: 0.25rem 0rem;
+  border: none;
+}
+
+.register {
+  text-decoration: none;
+
+}
+
+.submit {
+  padding: 5px;
+}
+
+.submit:hover {
+  background-color: greenyellow;
 }

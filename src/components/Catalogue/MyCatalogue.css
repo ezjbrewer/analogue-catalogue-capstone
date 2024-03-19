@@ -1,6 +1,7 @@
 button {
     border: none;
     text-decoration: none;
+    padding: 5px
 }
 
 table, th, td {
@@ -22,6 +23,7 @@ table, th, td {
 
 .add-record-btn:hover {
     background-color: greenyellow;
+    cursor: pointer;
 }
 
 .edit-record-btn {
@@ -30,6 +32,7 @@ table, th, td {
 
 .edit-record-btn:hover {
     background-color: greenyellow;
+    cursor: pointer;
 }
 
 .edit-btn-link {
@@ -52,6 +55,7 @@ table, th, td {
 .submit-record-btn {
     display: flex;
     justify-content: right;
+    cursor: pointer;
 }
 
 .submit-btn {
@@ -61,6 +65,7 @@ table, th, td {
 
 .submit-btn:hover {
     background-color: greenyellow;
+    cursor: pointer;
 }
 
 .delete-btn {
@@ -71,6 +76,7 @@ table, th, td {
 
 .delete-btn:hover {
     background-color: red;
+    cursor: pointer;
 }
 
 .btn-bar {
@@ -82,4 +88,8 @@ table, th, td {
     width: 50%;
     border: 2px solid black;
     padding: 5px;
+}
+
+.catalogue-count {
+    margin-bottom: 100px;
 }

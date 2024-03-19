@@ -7,4 +7,14 @@ body {
     width: 50%;
     margin: 0 auto;
     text-align: center;
+    padding: 10px;
+}
+
+.welcome-btn {
+    font-size: 24px;
+}
+
+.welcome-btn:hover {
+    background-color: greenyellow;
+    cursor: pointer;
 }
