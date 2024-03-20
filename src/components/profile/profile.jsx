@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react"
 import { getUserById } from "../auth/Services/userService.jsx"
 import { getRecords } from "../auth/Services/recordService.jsx"
+import { useNavigate } from "react-router-dom"
 import "./profile.css"
 
 export const Profile = ({currentUser}) => {
     const [user, setUser] = useState({})
     const [records, setRecords] = useState([])
+
+    const navigate = useNavigate()
 
     useEffect(() => {
         getUserById(currentUser.id).then((userObj) => {
@@ -36,6 +39,7 @@ export const Profile = ({currentUser}) => {
             <label>
                 You have <b>{records.length} records</b> in your catalogue!
             </label>
+            <button onClick={() => navigate("/editProfile")}>Edit Profile</button>
         </div>
     )
 }

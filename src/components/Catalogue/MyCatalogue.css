@@ -97,6 +97,7 @@ table, th, td {
     padding: 5px;
     background-color: #ffb445;
     margin: 10px 20px;
+    transition: background-color 0.2s linear;
     border-radius: 4px;
 }
 
@@ -111,6 +112,7 @@ table, th, td {
     margin: 10px 20px;
     background-color: #ffb445;
     border-radius: 4px;
+    transition: background-color 0.2s linear;
 }
 
 .delete-btn:hover {

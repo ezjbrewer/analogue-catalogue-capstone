@@ -41,11 +41,11 @@ button {
 .submit {
   padding: 5px;
   background-color: #ffb445;
-  transition: border-width 0.2s linear;
+  transition: background-color 0.2s linear;
 }
 
 .submit:hover {
-  border-width: 6px;
+  background-color: lightgreen;
 }
 
 .login-heading {

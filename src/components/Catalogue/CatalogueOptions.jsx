@@ -40,6 +40,19 @@ export const CatalogueOptions = ({userRecords, setUserRecords, currentUser}) => 
         setUserRecords(sortedRecords)
     }
 
+    const sortByYear = () => {
+      const sortedRecords = [...userRecords].sort(function (a, b) {
+        if (a.releaseYear < b.releaseYear) {
+          return -1
+        }
+        if (a.releaseYear > b.releaseYear) {
+          return 1
+        }
+        return 0
+      })
+    setUserRecords(sortedRecords)
+    }
+
     const handleSorting = (e) => {
         const value = parseInt(e.target.value)
         if (value === 1) {
@@ -48,6 +61,8 @@ export const CatalogueOptions = ({userRecords, setUserRecords, currentUser}) => 
             sortByGenre()
         } else if (value === 0) {
           setUserRecords(unsortedRecords)
+        } else if (value === 3) {
+          sortByYear()
         }
     }
     
@@ -61,6 +76,7 @@ export const CatalogueOptions = ({userRecords, setUserRecords, currentUser}) => 
                 <option value="0">Sort by...</option>
                 <option value="1">Artist(A to Z)</option>
                 <option value="2">Genre (A to Z)</option>
+                <option value="3">Year (Oldest to Newest)</option>
             </select>
         </div>
     )
