@@ -1,11 +1,11 @@
 button {
-    border: none;
+    border: 2px solid #d26d1a;
     text-decoration: none;
-    padding: 5px
+    padding: 5px;
 }
 
 table, th, td {
-    border: 2px solid black;
+    border: 2px solid #d26d1a;
     border-collapse: collapse;
     padding: 2px;
   }
@@ -16,9 +16,15 @@ table, th, td {
     margin-bottom: 10px;
 }
 
+.button-column {
+    border: none;
+    padding: 5px;
+}
+
 .add-record-btn {
     margin-right: 500px;
     color: black;
+    background-color: #ffb445;
 }
 
 .add-record-btn:hover {
@@ -27,7 +33,7 @@ table, th, td {
 }
 
 .edit-record-btn {
-    background-color: lightblue;
+    background-color: #ffb445;
 }
 
 .edit-record-btn:hover {
@@ -61,6 +67,7 @@ table, th, td {
 .submit-btn {
     font-size: 20px;
     padding: 5px;
+    background-color: #ffb445;
 }
 
 .submit-btn:hover {
@@ -72,6 +79,7 @@ table, th, td {
     font-size: 20px;
     padding: 5px;
     margin-right: 10px;
+    background-color: #ffb445;
 }
 
 .delete-btn:hover {
@@ -86,10 +94,17 @@ table, th, td {
 
 .new-record-card {
     width: 50%;
-    border: 2px solid black;
-    padding: 5px;
+    border: 5px solid #d26d1a;
+    border-radius: 1rem;
+    padding: 8px;
 }
 
 .catalogue-count {
     margin-bottom: 100px;
+}
+
+.sort-selector {
+    border: 2px solid #d26d1a;
+    background-color: #ffb445;
+    border-radius: 3px;
 }

@@ -39,6 +39,7 @@ export const Login = () => {
               <input
                 type="email"
                 value={email}
+                size="50"
                 className="auth-form-input"
                 onChange={(evt) => set(evt.target.value)}
                 placeholder="Email address"

@@ -31,7 +31,7 @@ export const CatalogueTable = ({userRecords}) => {
                     <td>{record.condition.conditionName}</td>
                     <td>{record.pressLocation}</td>
                     <td>{record.pressYear}</td>
-                    <td>
+                    <td className="button-column">
                         <button className="edit-record-btn">
                             <Link className="edit-btn-link" key={record.id} to={`/editRecord/${record.id}`}>
                                 Edit
