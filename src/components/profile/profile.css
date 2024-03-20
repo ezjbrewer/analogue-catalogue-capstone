@@ -36,3 +36,28 @@
 .save-profile-btn-div {
     text-align: right;
 }
+
+.edit-profile-btn {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.edit-btn {
+    border-radius: 4px;
+    transition: background-color 0.2s linear;
+}
+
+.edit-btn:hover {
+    background-color: lightgreen;
+    cursor: pointer;
+}
+
+.save-btn {
+    border-radius: 4px;
+    transition: background-color 0.2s linear;
+}
+
+.save-btn:hover {
+    background-color: lightgreen;
+    cursor: pointer;
+}

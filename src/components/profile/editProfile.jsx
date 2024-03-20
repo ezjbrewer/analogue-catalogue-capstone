@@ -37,7 +37,7 @@ export const EditProfile = ({currentUser}) => {
                 <h4>Email: <input className="edit-input" type="text" name="email" value={user?.email ? user.email : ""} onChange={handleInputChange}/></h4>
             </div>
             <div className="save-profile-btn-div">
-                <button onClick={updateUserObj}>Save Changes</button>
+                <button className="save-btn" onClick={updateUserObj}>Save Changes</button>
             </div>
         </div>
     )
