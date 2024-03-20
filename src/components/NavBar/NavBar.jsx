@@ -6,8 +6,9 @@ export const NavBar = () => {
     const navigate = useNavigate()
 
     return <ul className="navbar">
-        <li>
-          <img src="./images/catalogue-analogue-logo.png" width="50" alt="catalogue-analogue-logo"/>
+        <li className="logo-heading">
+          <img src="./images/catalogue-analogue-logo.png" width="60" alt="catalogue-analogue-logo"/>
+          <h4>Analogue Catalogue</h4>
         </li>
         <li className="navbar-item">
             <Link className="navbar-link" to='/home'>Home</Link>

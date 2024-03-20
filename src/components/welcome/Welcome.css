@@ -14,7 +14,9 @@ body {
 .welcome-btn {
     font-size: 24px;
     background-color: #ffb445;
-    border: 2px solid #d26d1a
+    border: 2px solid #d26d1a;
+    border-radius: 4px;
+    transition: background-color 0.2s linear;
 }
 
 .welcome-btn:hover {

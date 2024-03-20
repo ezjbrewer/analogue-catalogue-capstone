@@ -34,7 +34,7 @@ export const CatalogueTable = ({userRecords}) => {
                     <td className="button-column">
                         <button className="edit-record-btn">
                             <Link className="edit-btn-link" key={record.id} to={`/editRecord/${record.id}`}>
-                                Edit
+                                <img src="../images/pencil_edit.png" width="20"/>
                             </Link>
                         </button>
                     </td>

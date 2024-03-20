@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import { NewRecord } from "../components/Catalogue/NewRecords.jsx";
 import { EditRecord } from "../components/Catalogue/EditRecord.jsx";
 import { Profile } from "../components/profile/profile.jsx";
+import { EditProfile } from "../components/profile/editProfile.jsx";
 import { Home } from "../components/Home/Home.jsx";
 
 export const ApplicationViews = () => {
@@ -40,6 +41,10 @@ export const ApplicationViews = () => {
 
             <Route path="/profile">
               <Route index element={<Profile currentUser={currentUser}/>} />
+            </Route>
+
+            <Route path="/editProfile">
+                <Route index element={<EditProfile currentUser={currentUser} />}/>  
             </Route>
         </Route>
     </Routes>

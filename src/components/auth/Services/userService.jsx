@@ -19,3 +19,14 @@ export const getUserById = (userId) => {
     res.json()
   )
 }
+
+export const updateUser = (user) => {
+  const putOptions = {
+      method: "PUT",
+      headers: {
+          "Content-Type": "application/json"
+      },
+      body: JSON.stringify(user) 
+  }
+  return fetch(`http://localhost:8000/users/${user.id}`, putOptions)
+}

@@ -27,8 +27,8 @@ export const MyCatalogue = ({currentUser}) => {
                     <h1>You have {userRecords.length} records in your catalogue!</h1>
                 </div>
                 <div className="catalogue-options">
-                    <CatalogueOptions key={userRecords.id} userRecords={userRecords} setUserRecords={setUserRecords} currentUser={currentUser}/>
                     <button className="add-record-btn" onClick={() => navigate("/newRecord")}>Add a record</button>
+                    <CatalogueOptions key={userRecords.id} userRecords={userRecords} setUserRecords={setUserRecords} currentUser={currentUser}/>
                 </div>
             </div>
             <div>

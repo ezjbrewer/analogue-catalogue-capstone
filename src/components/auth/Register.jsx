@@ -49,7 +49,10 @@ export const Register = (props) => {
   return (
     <main className="auth-container">
       <form className="auth-form" onSubmit={handleRegister}>
-        <h1 className="header">Analogue Catalogue</h1>
+        <div className="login-heading">
+        <img src="../images/catalogue-analogue-logo.png" width="90"/>
+          <h1 className="header">Analogue Catalogue</h1>
+        </div>
         <h2>Please Register</h2>
         <fieldset className="auth-fieldset">
           <div>
