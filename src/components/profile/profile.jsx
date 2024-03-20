@@ -39,7 +39,9 @@ export const Profile = ({currentUser}) => {
             <label>
                 You have <b>{records.length} records</b> in your catalogue!
             </label>
-            <button onClick={() => navigate("/editProfile")}>Edit Profile</button>
+            <div className="edit-profile-btn">
+                <button className="edit-btn" onClick={() => navigate("/editProfile")}>Edit Profile</button>
+            </div>
         </div>
     )
 }
