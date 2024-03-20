@@ -56,6 +56,7 @@ export const CatalogueOptions = ({userRecords, setUserRecords, currentUser}) => 
             <select
                 defaultValue="0"
                 onChange={handleSorting}
+                className="sort-selector"
             >
                 <option value="0">Sort by...</option>
                 <option value="1">Artist(A to Z)</option>

@@ -4,7 +4,8 @@
     margin: 10px auto;
     padding: 3px;
     justify-content: space-between;
-    border-bottom: 2px solid black;
+    border-bottom: 4px solid #d26d1a;
+    border-radius: 4px;
     text-decoration: none;
   }
 
@@ -14,12 +15,18 @@
     text-align: center;
     color: var(--offWhite);
     text-decoration: none;
+    margin: auto 0;
+  }
+
+  img {
+    margin-left: 10px;
   }
 
   .navbar-link {
     text-decoration: none;
     font-family: "Nanum Gothic";
     font-weight: bolder;
+    font-size: 20px;
     color: black;
   }
   
@@ -31,6 +38,7 @@
     text-decoration: none;
     font-family: "Nanum Gothic";
     font-weight: bolder;
+    font-size: 20px;
     color: black;
   }
 
