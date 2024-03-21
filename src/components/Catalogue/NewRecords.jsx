@@ -26,7 +26,8 @@ export const NewRecord = ({currentUser}) => {
         setRecord(stateCopy)
       }
 
-    const handleRecordSave = () => {
+    const handleRecordSave = (event) => {
+        event.preventDefault()
         const newRecord = { ...record }
         newRecord.userId = currentUser.id
         newRecord.pressYear = newRecord.pressYear || "Unknown"
@@ -43,7 +44,7 @@ export const NewRecord = ({currentUser}) => {
             <div className="new-record-heading">
                 <h1>New Record</h1>
             </div>
-            <form className="new-record-form">
+            <form className="new-record-form" onSubmit={(event) => {handleRecordSave(event)}}>
                 <div>
                     <fieldset className="form-field">
                         <div >
@@ -132,7 +133,7 @@ export const NewRecord = ({currentUser}) => {
                 </fieldset>
                 </div>
                 <div className="submit-record-btn">
-                    <button type="button" className="submit-btn" onClick={handleRecordSave}>Add Record</button>
+                    <button type="submit" className="submit-btn">Add Record</button>
                 </div>
             </form>
         </div>
