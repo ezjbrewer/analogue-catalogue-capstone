@@ -50,4 +50,3 @@ export const ApplicationViews = () => {
     </Routes>
   )
 }
-//<Route path="/myCatalogue" element={<MyCatalogue currentUser={currentUser}/>}/> newRecord

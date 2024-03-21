@@ -6,7 +6,7 @@ import { getUserByEmail, createUser } from "./Services/userService.jsx"
 export const Register = (props) => {
   const [user, setUser] = useState({
     email: "",
-    fullName: "",
+    name: "",
   })
   let navigate = useNavigate()
 
