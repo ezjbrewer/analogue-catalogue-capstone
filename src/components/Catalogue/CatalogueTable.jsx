@@ -23,7 +23,11 @@ export const CatalogueTable = ({userRecords}) => {
                 return (
                 <tr key={record.id}>
                     <td>{record.artist}</td>
-                    <td>{record.recordName}</td>
+                    <td className="record-table-recordName">
+                        <Link className="edit-btn-link" key={record.id} to={`/createPost/${record.id}`}>
+                            {record.recordName}
+                        </Link>
+                    </td>
                     <td>{record.releaseYear}</td>
                     <td>{record.genre.genreName}</td>
                     <td>{record.type.typeName}</td>
