@@ -1,6 +1,171 @@
+button {
+    border: 2px solid #d26d1a;
+    text-decoration: none;
+    padding: 5px;
+    font-family: "Nanum Gothic";
+}
+
+.home-body {
+    margin-top: 30px;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 .post-card {
     border: 4px solid #d26d1a;
     border-radius: 1rem;
-    padding: 10px;
-    margin: 10px 0px;
+    padding: 10px 10px 0px 10px;
+    margin: 10px 20px;
+    width: 27%;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+}
+
+.like-btn {
+    border-radius: 4px;
+    margin-left: 5px;
+    transition: background-color 0.2s linear;
+}
+
+.like-btn:hover {
+    background-color: lightgreen;
+    cursor: pointer;
+}
+
+.og-post {
+    height: 50%;
+    overflow-y: auto; 
+}
+
+.post-home-info {
+    margin: 20px; 
+    flex: 1;
+}
+
+.comment-area-label {
+    margin-bottom: 5px;
+    font-style: italic;
+    margin-left: -2px;
+    font-size: 15px;
+}
+
+.comments-home {
+    margin-top: 40px;
+}
+
+.comment {
+    border: 2px solid #4f331b;
+    padding: 3px;
+    border-radius: 4px;
+    background-color: #fffadf;
+    margin-bottom: 5px;
+}
+
+.add-comment-btn {
+    margin-top: 10px;
+    border-radius: 4px;
+    transition: background-color 0.2s linear;
+}
+
+.add-comment-btn:hover {
+    background-color: lightgreen;
+    cursor: pointer;
+}
+
+.edit-comment-btn {
+    margin-right: 5px;
+    border-radius: 4px;
+    transition: background-color 0.2s linear;
+}
+
+.edit-comment-btn:hover {
+    background-color: lightgreen;
+    cursor: pointer;
+}
+
+.post-delete-btn {
+    width: 20%;
+    margin: 10px;
+    border-radius: 4px;
+    transition: background-color 0.2s linear;
+}
+
+.post-delete-btn:hover {
+    background-color: red;
+}
+
+.link-btn {
+    text-decoration: none;
+    color: black;
+}
+
+.post-body {
+    border: 4px solid #d26d1a;
+    border-radius: 1rem;
+    padding: 5px;
+    background-color: #fffadf;
+}
+
+
+.comments-body {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border: 4px solid #d26d1a;
+    border-radius: 2rem;
+    padding: 20px;
+}
+
+.original-post {
+    border: 4px solid #d26d1a;
+    border-radius: 1rem;
+    padding: 16px;
+    margin-bottom: 20px;
+    width: 60%;
+}
+
+.comment-section {
+    display: flex;
+    flex-direction: column;
+    border: 4px solid #d26d1a;
+    border-radius: 1rem;
+    width: 60%;
+    padding: 16px;
+    margin-bottom: 20px;
+}
+
+.user-comment {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    height: 100%;
+    width: 60%;
+    border: 4px solid #d26d1a;
+    border-radius: 1rem;
+    padding: 16px;
+}
+
+.submit-comment-btn {
+    height: 100%;
+    margin-left: 10px;
+    border-radius: 4px;
+    transition: background-color 0.2s linear;
+}
+
+.submit-comment-btn:hover {
+    background-color: lightgreen;
+    cursor: pointer;
+}
+
+.input-comment {
+    width: 75%;
+}
+
+.comment-input-with-label {
+    display: flex;
+    flex-direction: column;
 }

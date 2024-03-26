@@ -11,6 +11,6 @@ export const Comment = ({comment}) => {
     }, [comment])
     
     return(
-        <div key={comment.id}><b>{user?.name}</b>: {comment.commentText}</div>
+        <div className="comment" key={comment.id}><b>{user?.name}</b>: {comment.commentText}</div>
     )
 }

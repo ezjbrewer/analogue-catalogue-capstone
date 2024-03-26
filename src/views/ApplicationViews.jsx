@@ -8,6 +8,9 @@ import { EditRecord } from "../components/Catalogue/EditRecord.jsx";
 import { Profile } from "../components/profile/profile.jsx";
 import { EditProfile } from "../components/profile/editProfile.jsx";
 import { Home } from "../components/Home/Home.jsx";
+import { CreatePost } from "../components/Catalogue/CreatePost.jsx";
+import { EditPost } from "../components/Home/EditPost.jsx";
+import { CommentSection } from "../components/Home/CommentSection.jsx";
 
 export const ApplicationViews = () => {
     const [currentUser, setCurrentUser] = useState({})
@@ -31,12 +34,28 @@ export const ApplicationViews = () => {
             <Route path="/home">
               <Route index element={<Home currentUser={currentUser}/>} />
             </Route>
+
+            <Route path="/editPost">
+              <Route path=":postId" element={<EditPost currentUser={currentUser}/>} />
+            </Route>
+
+            <Route path="/comments">
+              <Route path=":postId" element={<CommentSection currentUser={currentUser}/>} />
+            </Route>
+
             <Route path="/myCatalogue">
               <Route index element={<MyCatalogue currentUser={currentUser}/>} />
             </Route>
+
             <Route path="/newRecord" element={<NewRecord currentUser={currentUser} />} />
+
             <Route path="/editRecord">
               <Route path=":recordId" element={<EditRecord currentUser={currentUser} />} />
+            </Route>
+
+
+            <Route path="createPost">
+              <Route path=":recordId" element={<CreatePost currentUser={currentUser} />} />
             </Route>
 
             <Route path="/profile">
