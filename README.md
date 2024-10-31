@@ -22,7 +22,7 @@ If you wish to clone this project, you will need Node and NPM installed on your 
 Enter `npm install` in your terminal on your working folder
 
 #### To run database
-Enter `json-server database.json -p 8000` in yor terminal on your data folder
+Enter `json-server database.json -p 8000` in your terminal in the data directory
 
 #### To run application
 Enter `npm run dev` in your terminal on your working folder
